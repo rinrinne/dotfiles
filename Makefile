@@ -10,7 +10,7 @@ clean-vim: $(foreach f, $(DOTFILES_VIM), unlink-dot-file-$(f))
 clean: clean-vim
 
 link-dot-file-%: %
-	@echo  "Create Symlink" $< => $(HOME)/$<"
+	@echo  "Create Symlink $< => $(HOME)/$<"
 	@ln -snf $(CURDIR)/$< $(HOME)/$<
 
 unlink-dot-file-%: %
