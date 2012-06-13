@@ -1,3 +1,5 @@
+# vim: ts=4:sw=4
+
 DOTFILES_VIM = .vim .vimrc
 
 all: vim

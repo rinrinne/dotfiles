@@ -10,5 +10,4 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/surround.vim'
 
-
 filetype plugin indent on
