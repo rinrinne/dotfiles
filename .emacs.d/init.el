@@ -12,3 +12,7 @@
 
 ;; paths
 (add-to-load-path "elisp" "conf" "public_repos")
+
+;; init-loader
+(require 'init-loader)
+(init-loader-load "~/.emacs.d/conf")
