@@ -1,0 +1,10 @@
+*.elc
+ac-comphist.dat
+elpa/
+public_repos/
+auto-install/
+undohist/
+archives/
+share/
+howm/
+bin/

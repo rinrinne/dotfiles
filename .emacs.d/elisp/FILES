@@ -1,1 +1,2 @@
 init-loader.el: https://gist.github.com/1021706
+auto-install.el: http://www.emacswiki.org/emacs/download/auto-install.el

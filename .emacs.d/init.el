@@ -11,7 +11,7 @@
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; paths
-(add-to-load-path "elisp" "conf" "public_repos")
+(add-to-load-path "elisp" "conf" "auto-install" "public_repos")
 
 ;; init-loader
 (require 'init-loader)
