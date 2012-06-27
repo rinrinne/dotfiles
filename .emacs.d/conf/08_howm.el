@@ -4,7 +4,7 @@
 (setq howm-menu-lang 'ja)
 ;(setq howm-file-name-format "%Y/%m/%Y-%m-%d.howm")
 
-(when (require 'howm-mode nil t)
+(when (require 'howm nil t)
   (define-key global-map (kbd "C-c ,,") 'howm-menu))
 
 ;; anything-howm
