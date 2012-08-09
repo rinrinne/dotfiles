@@ -12,7 +12,8 @@
 
 ;; paths
 (add-to-load-path "elisp" "conf" "auto-install" "public_repos")
+(setq user-public-repository-directory (concat user-emacs-directory "public_repository/"))
 
 ;; init-loader
 (require 'init-loader)
-(init-loader-load "~/.emacs.d/conf")
+(init-loader-load (concat user-emacs-directory "conf"))

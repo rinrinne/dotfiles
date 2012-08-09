@@ -9,9 +9,15 @@
 
 [core]
 	pager = lv -c
+	gitproxy = tun-proxy for android.git.linaro.org
+	gitproxy = tun-proxy for codeaurora.org
+#	gitproxy = tun-proxy for github.com
 
 [color]
 	ui = auto
+
+[url "https://github.com/"]
+	insteadOf = git://github.com/
 
 [credential "https://github.com"]
 	username = rinrinne

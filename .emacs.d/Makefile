@@ -1,3 +1,4 @@
-all:
-	@mkdir -p elpa public_repos auto_install
+DIRS := elpa public_repos auto_install
 
+all:
+	@mkdir -p $(DIRS)
