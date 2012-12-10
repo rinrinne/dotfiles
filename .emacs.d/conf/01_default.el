@@ -24,3 +24,6 @@
 (ibus-define-common-key [?\C-\s ?\C-/] nil)
 (setq ibus-cursor-color '("red" "blue" "limegreen"))
 (ibus-define-common-key ?\C-j t)
+
+;; font
+(add-to-list 'default-frame-alist '(font . "ricty-11"))
