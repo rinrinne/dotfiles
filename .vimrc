@@ -16,5 +16,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'vim-jp/cpp-vim'
 
 filetype plugin indent on
