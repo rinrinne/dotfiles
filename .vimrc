@@ -17,5 +17,10 @@ Bundle 'leafgarland/typescript-vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'vim-jp/cpp-vim'
+Bundle 'kingbin/vim-arduino'
+Bundle 'vim-scripts/sudo.vim'
+Bundle "ekalinin/Dockerfile.vim"
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 filetype plugin indent on
