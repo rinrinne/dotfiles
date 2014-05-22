@@ -22,5 +22,6 @@ Bundle 'vim-scripts/sudo.vim'
 Bundle "ekalinin/Dockerfile.vim"
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'tfnico/vim-gradle'
 
 filetype plugin indent on
