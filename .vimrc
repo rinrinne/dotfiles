@@ -4,24 +4,42 @@ set tabstop=2
 set shiftwidth=2
 filetype off
 set rtp+=~/.vim/vundle/
-call vundle#rc()
+set rtp+=~/.vim/private/
+" call vundle#rc()
+call vundle#begin()
 
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/unite.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/surround.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'vim-jp/cpp-vim'
-Bundle 'kingbin/vim-arduino'
-Bundle 'vim-scripts/sudo.vim'
-Bundle "ekalinin/Dockerfile.vim"
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'tfnico/vim-gradle'
+Plugin 'Shougo/neocomplcache'
+Plugin 'Shougo/unite.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-scripts/surround.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'vim-jp/cpp-vim'
+Plugin 'kingbin/vim-arduino'
+Plugin 'vim-scripts/sudo.vim'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+Plugin 'tfnico/vim-gradle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'ervandew/supertab'
+
+call vundle#end()
 
 filetype plugin indent on
+
+" NERDTree
+nmap <F3> :NERDTreeToggle<CR>
+
+" Tagbar
+nmap <F4> :TagbarToggle<CR>
+
+" SuperTab
+let g:SuperTabDefaultCompletionType = "context"
+
+runtime! conf.d/*.vim

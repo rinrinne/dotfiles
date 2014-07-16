@@ -1,3 +1,14 @@
+;; frame
+(setq default-frame-alist
+      (append
+        (list
+          '(width . 100)
+          '(height . 50)
+          '(top . 10)
+          '(bottom . 0)
+          )
+        default-frame-alist))
+
 ;; mode-line
 (column-number-mode t)
 
@@ -19,11 +30,14 @@
 (setq cua-enable-cua-keys nil)
 
 ;; ibus
-(require 'ibus)
-(add-hook 'after-init-hook 'ibus-mode-on)
-(ibus-define-common-key [?\C-\s ?\C-/] nil)
-(setq ibus-cursor-color '("red" "blue" "limegreen"))
-(ibus-define-common-key ?\C-j t)
+;(require 'ibus)
+;(add-hook 'after-init-hook 'ibus-mode-on)
+;(ibus-define-common-key [?\C-\s ?\C-/] nil)
+;(setq ibus-cursor-color '("red" "blue" "limegreen"))
+;(ibus-define-common-key ?\C-j t)
+
+;; fcitx
+(global-set-key (kbd "C-SPC") nil)
 
 ;; font
 (add-to-list 'default-frame-alist '(font . "ricty-11"))
