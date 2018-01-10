@@ -1,19 +1,26 @@
 ;;; emacs configuration file
 
-;; load-path
-(defun add-to-load-path (&rest paths)
-  (let (path)
-    (dolist (path paths paths)
-      (let ((default-directory
-	      (expand-file-name (concat user-emacs-directory path))))
-	(add-to-list 'load-path default-directory)
-	(if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-	    (normal-top-level-add-subdirs-to-load-path))))))
+;; load private settings
+(load (expand-file-name (concat user-emacs-directory "init-private.el")) t)
 
-;; paths
-(add-to-load-path "elisp" "conf" "auto-install" "public_repos")
-(setq user-public-repository-directory (concat user-emacs-directory "public_repository/"))
+;; package system
+(require 'package)
+(package-initialize)
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+        ("melpa" . "http://melpa.org/packages/")
+        ("org" . "http://orgmode.org/elpa/")))
 
-;; init-loader
-(require 'init-loader)
-(init-loader-load (concat user-emacs-directory "conf"))
+(unless package-archive-contents
+  (package-refresh-contents))
+
+;;; ensure to use use-package
+(when (not (package-installed-p 'use-package))
+  (package-install 'use-package))
+(require 'use-package)
+
+;;; init-loader
+(use-package init-loader
+             :ensure t
+             :config
+             (init-loader-load))
