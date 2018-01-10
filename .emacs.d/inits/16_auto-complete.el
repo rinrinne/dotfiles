@@ -2,8 +2,10 @@
 ;; https://github.com/m2ym/auto-complete.git
 ;; https://github.com/m2ym/popup-el.git
 
-(when (require 'auto-complete-config nil t)
-  (add-to-list 'ac-dictionary-directories
-	       "~/.emacs.d/elisp/ac-dict")
-  (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
-  (ac-config-default))
+(use-package auto-complete
+             :ensure t
+             :config
+             (add-to-list 'ac-dictionary-directories
+                          (expand-file-name (concat user-emacs-directory "elisp/ac-dict")))
+             (bind-key "M-TAB" 'auto-complete ac-mode-map)
+             (ac-config-default))

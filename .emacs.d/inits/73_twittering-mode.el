@@ -1,3 +1,3 @@
-;; zencoding
+;; twittering-mode
 ;;
-(autoload 'twittering-mode "twittering-mode" nil t)
+(use-package twittering-mode :ensure t)

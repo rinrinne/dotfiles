@@ -37,7 +37,7 @@
 ;(ibus-define-common-key ?\C-j t)
 
 ;; fcitx
-(global-set-key (kbd "C-SPC") nil)
+(bind-key "C-SPC" nil)
 
 ;; font
 (add-to-list 'default-frame-alist '(font . "ricty-11"))

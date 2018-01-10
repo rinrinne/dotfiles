@@ -1,7 +1,7 @@
 ;; color-theme
 ;; https://github.com/sellout/emacs-color-theme-solarized
 
-(when (require 'color-theme nil t)
-  (color-theme-initialize)
-  (when (require 'color-theme-solarized nil t)
-    (color-theme-solarized-dark)))
+(use-package madhat2r-theme
+             :ensure t
+             :config
+             (load-theme 'madhat2r t))

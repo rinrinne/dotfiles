@@ -1,3 +1,5 @@
 ;; magit
 ;;
-(require 'magit nil t)
+
+(use-package magit
+             :ensure t)

@@ -1,0 +1,89 @@
+;; Anythng
+;; (auto-install-batch "anything")
+
+(use-package anything
+             :ensure t
+             :bind (("C-x b" . anything-mini))
+             :config
+             (require 'anything-config)
+             (setq
+               anything-enable-shortcuts 'prefix)
+             (bind-key "@" 'anything-select-with-prefix-shortcut anything-map))
+
+;;(use-package anything
+;;             :ensure t
+;;             :config
+;;             (setq
+;;               anything-idle-delay 0.3
+;;               anything-input-idle-delay 0.2
+;;               anything-candidate-number-limit 100
+;;               anything-quick-update t
+;;               anything-enable-shortcuts 'alphabet)
+;;             (use-package anything-config
+;;                          :ensure t
+;;                          :bind (("M-y" . anything-show-kill-ring))
+;;                          :config
+;;                          (setq anything-su-or-sudo "sudo"))
+;;             (use-package anything-match-plugin
+;;                          :ensure t)
+;;             (when (executable-find "cmigemo")
+;;               (use-package migemo :ensure t)
+;;               (use-package anything-migemo :ensure t))
+;;             (use-package anything-complete
+;;                          :ensure t
+;;                          :config
+;;                          (anything-lisp-complete-symbol-set-timer 150))
+;;             (use-package anything-show-completion)
+;;             (use-package descbinds-anything
+;;                          :ensure t
+;;                          :config
+;;                          (descbinds-anything-install))
+;;             (use-package color-moccur
+;;                          :ensure t
+;;                          :config
+;;                          (use-package anything-c-moccur
+;;                                       :ensure t
+;;                                       :bind (("C-M-o" . anything-c-moccur-occur-by-moccur))
+;;                                       :config
+;;                                       (setq
+;;                                         anything-c-moccur-higligt-into-line-flag t
+;;                                         anything-c-moccur-enable-auto-look-flag t
+;;                                         anything-c-moccur-enable-initial-pattern t))))
+
+
+;;(when (require 'anything nil t)
+;;  (setq
+;;    anything-idle-delay 0.3
+;;    anything-input-idle-delay 0.2
+;;    anything-candidate-number-limit 100
+;;    anything-quick-update t
+;;    anything-enable-shortcuts 'alphabet)
+;;
+;;  (when (require 'anything-config nil t)
+;;    (setq anything-su-or-sudo "sudo")
+;;    (define-key global-map (kbd "M-y") 'anything-show-kill-ring))
+;;
+;;  (require 'anything-match-plugin nil t)
+;;
+;;  (when (and (executable-find "cmigemo")
+;;	     (require 'migemo nil t))
+;;    (require 'anything-migemo nil t))
+;;
+;;  (when (require 'anything-complete nil t)
+;;    (anything-lisp-complete-symbol-set-timer 150))
+;;
+;;  (require 'anything-show-completion nil t)
+;;
+;;  (when (require 'auto-install nil t)
+;;    (require 'anything-auto-install nil t))
+;;
+;;  (when (require 'descbinds-anything nil t)
+;;    (descbinds-anything-install))
+;;  
+;;  (when (require 'color-moccur nil t)
+;;    (when (require 'anything-c-moccur nil t)
+;;      (setq
+;;	anything-c-moccur-higligt-into-line-flag t
+;;	anything-c-moccur-enable-auto-look-flag t
+;;	anything-c-moccur-enable-initial-pattern t)
+;;      (global-set-key (kbd "C-M-o") 'anything-c-moccur-occur-by-moccur))))

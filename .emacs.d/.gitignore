@@ -1,6 +1,7 @@
 init-private.el
 *.elc
 ac-comphist.dat
+recentf
 elpa/
 public_repos/
 auto_install/
